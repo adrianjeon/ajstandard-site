@@ -453,9 +453,14 @@ img {
   margin-top: 16px;
   font-size: 14px;
   font-weight: var(--fw-semibold);
-  color: var(--color-accent);
+  color: #C9A96E;
   letter-spacing: 0.03em;
+  text-decoration: none;
   transition: opacity 0.25s var(--ease);
+}
+
+.insight-card__link:visited {
+  color: #C9A96E;
 }
 
 .insight-card__link:hover {
@@ -616,8 +621,4 @@ img {
   }
 
   .hero__cta,
-  .contact__email {
-    display: block;
-    text-align: center;
-  }
-}
+  .con
