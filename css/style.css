@@ -448,19 +448,27 @@ img {
   line-height: 1.7;
 }
 
+/* --- FIX: Insight link mobile visibility --- */
 .insight-card__link {
   display: inline-block;
   margin-top: 16px;
   font-size: 14px;
   font-weight: var(--fw-semibold);
-  color: #C9A96E;
+  color: #C9A96E !important;
+  -webkit-text-fill-color: #C9A96E;
   letter-spacing: 0.03em;
   text-decoration: none;
   transition: opacity 0.25s var(--ease);
 }
 
 .insight-card__link:visited {
-  color: #C9A96E;
+  color: #C9A96E !important;
+  -webkit-text-fill-color: #C9A96E;
+}
+
+.insight-card__link:active {
+  color: #C9A96E !important;
+  -webkit-text-fill-color: #C9A96E;
 }
 
 .insight-card__link:hover {
@@ -599,8 +607,17 @@ img {
   }
 
   /* Insights */
+  .insight-card {
+    padding: 20px 0 20px 20px;
+  }
+
   .insight-card__title {
     font-size: 19px;
+  }
+
+  .insight-card__link {
+    font-size: 14px;
+    padding: 8px 0;
   }
 
   /* Footer */
@@ -611,6 +628,9 @@ img {
   }
 }
 
+/* ============================================================
+   RESPONSIVE — 480px
+   ============================================================ */
 @media (max-width: 480px) {
   .nav__inner {
     height: 64px;
@@ -621,4 +641,9 @@ img {
   }
 
   .hero__cta,
-  .con
+  .contact__email {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+  }
+}
