@@ -146,12 +146,12 @@ img {
 
 .nav__cta {
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--color-primary) !important;
   background: var(--color-accent);
-  padding: 10px 24px;
-  letter-spacing: 0.03em;
+  padding: 11px 28px;
+  letter-spacing: 0.02em;
   transition: background 0.25s var(--ease), transform 0.2s var(--ease);
 }
 
@@ -481,17 +481,12 @@ img {
   color: var(--color-accent);
 }
 
-.contact__heading {
-  font-size: clamp(28px, 3.5vw, 40px);
-  font-weight: var(--fw-bold);
-  color: var(--color-white);
-  margin-bottom: 16px;
-  letter-spacing: -0.01em;
-}
-
 .contact__sub {
-  font-size: 16px;
-  color: var(--color-text-gray);
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.4;
   margin-bottom: 40px;
 }
 
