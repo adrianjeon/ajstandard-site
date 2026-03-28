@@ -61,20 +61,21 @@
   const navAnchors = document.querySelectorAll('.nav__links a:not(.nav__cta)');
 
   function updateActiveNav() {
-    const scrollY = window.scrollY + 100;
+    const scrollY = window.scrollY + 200;
+    let currentId = '';
 
     sections.forEach((section) => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
       if (scrollY >= top && scrollY < top + height) {
-        navAnchors.forEach((a) => {
-          a.style.color = '';
-          if (a.getAttribute('href') === '#' + id) {
-            a.style.color = 'var(--color-white)';
-          }
-        });
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    navAnchors.forEach((a) => {
+      a.style.color = '';
+      if (a.getAttribute('href') === '#' + currentId) {
+        a.style.color = 'var(--color-white)';
       }
     });
   }
