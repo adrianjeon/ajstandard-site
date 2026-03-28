@@ -61,13 +61,12 @@
   const navAnchors = document.querySelectorAll('.nav__links a:not(.nav__cta)');
 
   function updateActiveNav() {
-    const scrollY = window.scrollY + 200;
+    const scrollY = window.scrollY + 150;
     let currentId = '';
 
+    /* Find the last section whose top is above the scroll position */
     sections.forEach((section) => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (scrollY >= top && scrollY < top + height) {
+      if (section.offsetTop <= scrollY) {
         currentId = section.getAttribute('id');
       }
     });
