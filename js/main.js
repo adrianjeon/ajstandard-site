@@ -62,14 +62,27 @@
 
   function updateActiveNav() {
     const scrollY = window.scrollY + 150;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
     let currentId = '';
 
-    /* Find the last section whose top is above the scroll position */
-    sections.forEach((section) => {
-      if (section.offsetTop <= scrollY) {
-        currentId = section.getAttribute('id');
+    /* If near bottom of page, use the last section with a nav link */
+    if (window.scrollY + windowHeight >= docHeight - 50) {
+      const allIds = Array.from(navAnchors).map(a => a.getAttribute('href').replace('#', ''));
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const id = sections[i].getAttribute('id');
+        if (allIds.includes(id)) {
+          currentId = id;
+          break;
+        }
       }
-    });
+    } else {
+      sections.forEach((section) => {
+        if (section.offsetTop <= scrollY) {
+          currentId = section.getAttribute('id');
+        }
+      });
+    }
 
     navAnchors.forEach((a) => {
       a.style.color = '';
