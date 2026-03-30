@@ -547,6 +547,11 @@ img {
   color: var(--color-text-gray);
 }
 
+.footer__address {
+  font-size: 13px;
+  color: var(--color-text-gray);
+}
+
 .footer__links a {
   font-size: 13px;
   color: var(--color-text-gray);
@@ -654,9 +659,4 @@ img {
   }
 
   .hero__cta,
-  .contact__email {
-    width: 100%;
-    text-align: center;
-    padding: 14px 24px;
-  }
-}
+  .contact__email
